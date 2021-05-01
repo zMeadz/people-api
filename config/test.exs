@@ -8,3 +8,8 @@ config :people, PeopleWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+config :people, :services,
+  salesloft: [
+    auth_token: "test_token"
+  ]

@@ -15,6 +15,6 @@ defmodule People.Salesloft.HttpService do
   end
 
   def _get_headers() do
-    ["Authorization": "Bearer " <> _get_auth_token()]
+    [Authorization: "Bearer " <> _get_auth_token()]
   end
 end

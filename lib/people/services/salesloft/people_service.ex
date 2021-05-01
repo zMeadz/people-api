@@ -7,10 +7,10 @@ defmodule People.Salesloft.PeopleService do
   def get_all() do
     1..@total_pages
     |> Enum.map(fn page ->
-        Task.async(fn ->
-          HttpService.get("people.json", [params: [per_page: @max_per_page, page: page]])
-        end)
+      Task.async(fn ->
+        HttpService.get("people.json", params: [per_page: @max_per_page, page: page])
       end)
+    end)
     |> Enum.map(&Task.await/1)
     |> _format_responses()
   end
