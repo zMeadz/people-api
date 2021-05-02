@@ -22,8 +22,8 @@ defmodule PeopleWeb.Router do
       scope "/salesloft" do
         scope "/people" do
           get "/", PeopleController, :index
-
           get "/character-count", PeopleController, :character_count
+          get "/matches", PeopleController, :matches
         end
       end
     end

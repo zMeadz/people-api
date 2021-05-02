@@ -16,4 +16,14 @@ defmodule People.StringService do
       Map.update(acc, char, 1, &(&1 + 1))
     end)
   end
+
+  @doc """
+  Calculate Jaro distance of 2 strings.
+  Converts any non-strings to strings
+  """
+  def get_jaro_distance(string1, string2) do
+    string1 = Kernel.inspect(string1)
+    string2 = Kernel.inspect(string2)
+    String.jaro_distance(string1, string2)
+  end
 end

@@ -10,7 +10,12 @@ use Mix.Config
 config :people, :services,
   salesloft: [
     base_url: "https://api.salesloft.com",
-    version: "v2"
+    version: "v2",
+    matching_thresholds: [
+      email_address: 0.9,
+      first_name: 0.84,
+      last_name: 0.84
+    ]
   ]
 
 # Configures the endpoint

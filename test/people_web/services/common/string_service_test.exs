@@ -11,4 +11,8 @@ defmodule People.StringServiceTest do
              "o" => 1
            }
   end
+
+  test "can calculate jaro distance between two strings" do
+    assert StringService.get_jaro_distance("hustle", "bustle") === 0.9166666666666666
+  end
 end

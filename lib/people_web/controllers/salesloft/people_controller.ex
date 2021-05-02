@@ -20,4 +20,9 @@ defmodule PeopleWeb.Salesloft.PeopleController do
     people = PeopleService.get_all()
     json(conn, people)
   end
+
+  def matches(conn, _params) do
+    matches = PeopleService.get_matches()
+    json(conn, matches)
+  end
 end
