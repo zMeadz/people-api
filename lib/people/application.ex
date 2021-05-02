@@ -12,9 +12,9 @@ defmodule People.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: People.PubSub},
       # Start the Endpoint (http/https)
-      PeopleWeb.Endpoint
-      # Start a worker by calling: People.Worker.start_link(arg)
-      # {People.Worker, arg}
+      PeopleWeb.Endpoint,
+      # Cache
+      {People.CacheService, name: People.CacheService}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

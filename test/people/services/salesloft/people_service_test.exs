@@ -2,7 +2,16 @@ defmodule People.Salesloft.PeopleServiceTest do
   use ExUnit.Case
   import Mock
 
-  alias People.Salesloft.PeopleService
+  alias People.{
+    CacheService,
+    Salesloft.PeopleService
+  }
+
+  setup do
+    on_exit(fn ->
+      CacheService.delete(:salesloft, :people)
+    end)
+  end
 
   test "can format list of responses" do
     responses = [
