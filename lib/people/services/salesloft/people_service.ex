@@ -44,9 +44,9 @@ defmodule People.Salesloft.PeopleService do
         CacheService.set(@cache_table, :matches, matches)
         matches
 
-      matches -> matches
+      matches ->
+        matches
     end
-
   end
 
   def _http_get_all() do
