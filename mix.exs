@@ -44,7 +44,8 @@ defmodule People.MixProject do
       {:httpoison, "~> 1.8"},
       {:plug_cowboy, "~> 2.0"},
       {:mock, "~> 0.3.0", only: :test},
-      {:elixir_uuid, "~> 1.2"}
+      {:elixir_uuid, "~> 1.2"},
+      {:cors_plug, "~> 2.0"}
     ]
   end
 
