@@ -1,19 +1,14 @@
-# People
+# People API
 
-To start your Phoenix server:
+This gateway service provides a connection to Salesloft People API.
 
-  * Install dependencies with `mix deps.get`
-  * Install Node.js dependencies with `npm install` inside the `assets` directory
-  * Start Phoenix endpoint with `mix phx.server`
+## Setup
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+First, install dependencies with `mix deps.get`.
+Then, start the server with `mix phx.server`.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+Checkout the [UI](https://github.com/zMeadz/people-ui) for the best user experience! You may also make calls locally using a tool like [Postman](https://www.postman.com/).
 
-## Learn more
+## Authors
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+Zachary Meadors <zacharymeadors1@gmail.com>
