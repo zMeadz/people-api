@@ -46,7 +46,8 @@ defmodule People.Salesloft.MatchingService do
   def _crm_id_matches?(
         %{"crm_id" => record_crm_id} = _record,
         %{"crm_id" => candidate_crm_id} = _candidate
-      ) when is_nil(record_crm_id) or is_nil(candidate_crm_id) do
+      )
+      when is_nil(record_crm_id) or is_nil(candidate_crm_id) do
     false
   end
 
