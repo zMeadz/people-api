@@ -16,7 +16,6 @@ defmodule People.Salesloft.PeopleService do
     responses
     |> Enum.reduce([], fn cur, acc -> acc ++ get_body_data(cur) end)
     |> Enum.map(&_prune_fields(&1))
-    |> IO.inspect()
   end
 
   def get_all() do
@@ -75,4 +74,6 @@ defmodule People.Salesloft.PeopleService do
       "crm_id" => crm_id
     }
   end
+
+  def _prune_fields(map) when is_map(map), do: map
 end
